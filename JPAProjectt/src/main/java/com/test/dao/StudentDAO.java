@@ -15,6 +15,7 @@ import javax.persistence.TypedQuery;
  
 public class StudentDAO { 
  	 
+	
  	private EntityManagerFactory emFactory;  
  	 
  	public StudentDAO(){ 
