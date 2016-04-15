@@ -2,6 +2,7 @@
 package com.test.controller;
 
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
@@ -10,17 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.test.model.User;
+
 //import com.test.model.User;
 
 @Controller
 public class DemoController {
 	
-	@RequestMapping(method=RequestMethod.GET,value="/Welcome")
+	/*@RequestMapping(method=RequestMethod.GET,value="/Welcome")
 	public String showWelcome(){
 		System.out.println(" ****** Spring Welcome  ******");
 		//B.L
 		return "welcome";  //View Name /WEB-INF/jsp/welcome.jsp
-	}
+	}*/
 	
 	/*@RequestMapping(method=RequestMethod.GET,value="/welcome") //View Name /WEB-INF/jsp/welcome.jsp
 	public void getWelcome(){
@@ -34,23 +37,24 @@ public class DemoController {
 		return "welcome"; 
 	}
 	
+	//http://localhost:8080/WebAppProject/mvc/sendData/har?password=101
 	@RequestMapping(method=RequestMethod.GET,value="/sendData/{username}") //View Name /WEB-INF/jsp/welcome.jsp
 	public String userInputDemo(@PathVariable String username,String  password){
 		System.out.println(" ****** Spring Welcome  ******");
 		System.out.println(" USer Name  : " + username);
 		System.out.println(" PAssword  : " + password);
 		return "welcome"; 
-	}
-	
-	@RequestMapping(method=RequestMethod.POST,value="/sendData") //View Name /WEB-INF/jsp/welcome.jsp
+	}*/
+	//http://localhost:8080/WebAppProject/springlogin.jsp
+	/*@RequestMapping(method=RequestMethod.POST,value="/sendData") //View Name /WEB-INF/jsp/welcome.jsp
 	public String userPostDemo(String username,String password){
 		System.out.println(" ****** Spring Welcome  ******");
 		System.out.println(" USer Name  : " + username);
 		System.out.println(" PAssword  : " + password);
 		return "welcome"; 
-	}
-	
-	@RequestMapping(method=RequestMethod.GET,value="/getuserdata/{username}") //View Name /WEB-INF/jsp/welcome.jsp
+	}*/
+	//http://localhost:8080/WebAppProject/mvc/getuserdata/mom
+	/*@RequestMapping(method=RequestMethod.GET,value="/getuserdata/{username}") //View Name /WEB-INF/jsp/welcome.jsp
 	public ModelAndView returnOutputData(@PathVariable String username){
 		//B.L
 		ModelAndView mv = new ModelAndView();
@@ -59,8 +63,9 @@ public class DemoController {
 		mv.addObject("address", "567 N W , Gori St");
 		mv.addObject("zipCode", "675756");
 		return mv;
-	}
+	}*/
 	
+	//http://localhost:8080/WebAppProject/mvc/getuser/ken
 	@RequestMapping(method=RequestMethod.GET,value="/getuser/{username}") //View Name /WEB-INF/jsp/welcome.jsp
 	public ModelAndView returnOutputObject(@PathVariable String username){
 		//B.L
@@ -70,5 +75,5 @@ public class DemoController {
 		return mv;
 	}
 	
-	*/
+	
 }
